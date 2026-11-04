@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #131318;
+    color: #e4e1e9;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* Custom subtle cosmic scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0e0e13;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2a292f;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4b4453;
+  }
+}
+
+@layer utilities {
+  .font-script {
+    font-family: 'Allura', cursive;
+  }
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+
+  .cosmic-radial-glow {
+    background: radial-gradient(circle at 50% 0%, rgba(169, 112, 255, 0.18) 0%, rgba(5, 5, 9, 0) 70%);
+  }
+
+  .border-luminescence {
+    border-image: linear-gradient(135deg, rgba(169, 112, 255, 0.4) 0%, rgba(41, 36, 58, 0.4) 50%, rgba(185, 201, 255, 0.2) 100%) 1;
+  }
+
+  .glass-card {
+    background-color: rgba(17, 17, 31, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid #29243A;
+  }
+
+  .glass-card-hover {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .glass-card-hover:hover {
+    transform: translateY(-4px);
+    border-color: rgba(169, 112, 255, 0.5);
+    box-shadow: 0 16px 36px -8px rgba(169, 112, 255, 0.22);
+  }
+
+  .text-glow-primary {
+    text-shadow: 0 0 24px rgba(171, 115, 255, 0.5);
+  }
+  .text-glow-secondary {
+    text-shadow: 0 0 24px rgba(181, 197, 251, 0.5);
+  }
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}
